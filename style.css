@@ -10,11 +10,14 @@ body {
 
 /* Mobile UI container */
 .mobile-ui {
-  height: 100vh; /* full screen */
+  height: 100vh;
+  /* full screen */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center; /* horizontal center */
+  justify-content: center;
+  /* vertical center */
+  align-items: center;
+  /* horizontal center */
 }
 
 .mobile-ui a {
@@ -53,16 +56,13 @@ body {
 }
 
 .input-container input {
-  /* width: 100%; */
-  padding: 15px 55px 15px 20px; /* right space for button */
+  width: 200px;
+  padding: 15px 55px 15px 20px;
+  /* right space for button */
   border: none;
   outline: none;
   border-radius: 40px;
   font-size: 16px;
-}
-
-.dob {
-  width: 200px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -87,18 +87,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Success Message */
-#message {
-  font-size: 22px;
-  font-weight: bold;
-  color: green;
-}
-
 .circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  border: none;
 }
 
 /* Desktop message */
