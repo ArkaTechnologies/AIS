@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Interface Only</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Mobile UI -->
+    <div class="mobile-ui">
+        <img src="logo.jpg" class="logo" alt="Logo">
+
+        <h2>Your AIS Account is ready</h2>
+        <p><button class="circle" id="count" value="5">5</button></p>
+    </div>
+
+<!-- Desktop warning -->
+    <div class="desktop-warning">
+        <h2>Only for Mobile</h2>
+        <p>Please open this page on a mobile device.</p>
+    </div>
+
+<script>
+    let count = 5;
+
+    let timer = setInterval(() => {
+        count--;
+
+        if (count > 0) {
+            document.getElementById("count").innerText = count;
+        } else {
+            // Hide the counter when 0 reached
+            document.getElementById("count").innerText = "";
+        }
+
+        // Direct redirect when count = 0
+        if (count === 0) {
+            clearInterval(timer);
+
+            window.location.href = "index.html";   // direct redirect
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
