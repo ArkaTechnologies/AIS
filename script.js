@@ -1,15 +1,19 @@
-function showAIS() {
-    document.getElementById("home-screen").classList.add("hidden");
-    document.getElementById("ais-screen").classList.remove("hidden");
-}
+let count = 5;
 
-function showRegister() {
-    document.getElementById("home-screen").classList.add("hidden");
-    document.getElementById("register-screen").classList.remove("hidden");
-}
+let timer = setInterval(() => {
+    count--;
 
-function goBack() {
-    document.getElementById("ais-screen").classList.add("hidden");
-    document.getElementById("register-screen").classList.add("hidden");
-    document.getElementById("home-screen").classList.remove("hidden");
-}
+    if (count > 0) {
+        document.getElementById("count").innerText = count;
+    } else {
+        // Hide the counter when 0 reached
+        document.getElementById("count").innerText = "";
+    }
+
+    // Direct redirect when count = 0
+    if (count === 0) {
+        clearInterval(timer);
+
+        window.location.href = "index.html";   // direct redirect
+    }
+}, 1000);
